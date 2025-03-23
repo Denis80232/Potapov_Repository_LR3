@@ -3,7 +3,9 @@
 using namespace std;
 
 void Task1(){
-    //разрабатывается...
+    int x;
+    cout << "Введите натуральное число X: " << endl;
+    cin >> x;
 }
 
 void Task2(){
