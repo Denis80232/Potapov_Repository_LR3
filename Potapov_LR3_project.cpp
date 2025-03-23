@@ -14,52 +14,50 @@ void Task1(int& number) {
   }
 }
 
-void Task2(){
- int number;
-  Task1(number); 
-  number = abs(number); 
+void Task2(int number){
+  int num = abs(number); 
 
-  if (number < 10) {
-    cout << "Число " << number << " начинается и заканчивается одной и той же цифрой.\n";
+  if (num < 10) {
+    cout << "Число " << num << " начинается и заканчивается одной и той же цифрой.\n";
     return;
   }
 
-  string str_num = to_string(number);
+  string str_num = to_string(num);
   if (str_num[0] == str_num.back()) {
-    cout << "Число " << number << " начинается и заканчивается одной и той же цифрой.\n";
+    cout << "Число " << num << " начинается и заканчивается одной и той же цифрой.\n";
   } else {
-    cout << "Число " << number << " не начинается и не заканчивается одной и той же цифрой.\n";
+    cout << "Число " << num << " не начинается и не заканчивается одной и той же цифрой.\n";
   }
 }
 
-void Task3(){
-int number;
-  Task1(number);
-  number = abs(number); 
+void Task3(int number){
+  int num1 = abs(number); 
 
-  if (number % 2 != 0) {
-    cout << "Число " << number << " заканчивается нечетной цифрой.\n";
+  if (num1 % 2 != 0) {
+    cout << "Число " << num1 << " заканчивается нечетной цифрой.\n";
   } else {
-    cout << "Число " << number << " заканчивается четной цифрой.\n";
+    cout << "Число " << num1 << " заканчивается четной цифрой.\n";
   }
 }
 
 int main(){
     int choice;
+    int number = 0;
     cout << "Task 1. Ввод натурального числа X." << endl;
     cout << "Task 2. Проверка числа на начало и окончание на одну цифру." << endl;
     cout << "Task 3. Проверка числа на окончание на нечётную цифру." << endl;
     do{
         cout << "Please enter the number of the desired function or 0 if you want to close the app." << endl;
+        cin >> choice;
         switch(choice){
             case 1:
-                Task1();
+                Task1(number);
                 break;
             case 2:
-                Task2();
+                Task2(number);
                 break;
             case 3:
-                Task3();
+                Task3(number);
                 break;
             default:
                 if (choice != 0 or choice < 0 or choice > 3){
