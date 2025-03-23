@@ -15,7 +15,21 @@ void Task1(int& number) {
 }
 
 void Task2(){
-    //разрабатывается...
+ int number;
+  Task1(number); 
+  number = abs(number); 
+
+  if (number < 10) {
+    cout << "Число " << number << " начинается и заканчивается одной и той же цифрой.\n";
+    return;
+  }
+
+  string str_num = to_string(number);
+  if (str_num[0] == str_num.back()) {
+    cout << "Число " << number << " начинается и заканчивается одной и той же цифрой.\n";
+  } else {
+    cout << "Число " << number << " не начинается и не заканчивается одной и той же цифрой.\n";
+  }
 }
 
 void Task3(){
