@@ -33,7 +33,15 @@ void Task2(){
 }
 
 void Task3(){
-    //разрабатывается
+int number;
+  Task1(number);
+  number = abs(number); 
+
+  if (number % 2 != 0) {
+    cout << "Число " << number << " заканчивается нечетной цифрой.\n";
+  } else {
+    cout << "Число " << number << " заканчивается четной цифрой.\n";
+  }
 }
 
 int main(){
