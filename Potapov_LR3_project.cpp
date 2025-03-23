@@ -1,11 +1,17 @@
 #include <iostream>
+#include <string>
+#include <algorithm>
 
 using namespace std;
 
-void Task1(){
-    int x;
-    cout << "Введите натуральное число X: " << endl;
-    cin >> x;
+void Task1(int& number) {
+  cout << "Введите натуральное число: ";
+  cin >> number;
+
+  while (number <= 0) {
+    cout << "Число должно быть натуральным (больше нуля). Повторите ввод: ";
+    cin >> number;
+  }
 }
 
 void Task2(){
